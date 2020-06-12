@@ -6,7 +6,7 @@ import { MdSpaceBar } from 'react-icons/md'
 export const Container = styled.div`
   flex: 1;
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   border-bottom-right-radius: 10px;
@@ -35,6 +35,7 @@ export const IconInfo = styled(BsInfoSquare)`
 export const ModalContainer = styled.div`
   display: flex;
   flex-shrink: 1;
+  z-index: 6;
   position: absolute;
   flex-direction: column;
   background-color: #fff;

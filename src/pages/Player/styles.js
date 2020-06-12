@@ -8,12 +8,14 @@ export const Container = styled.div`
 export const PlayerScreen = styled.div`
   display: flex;
   width: 100vw; 
+  overflow: scroll;
   flex-direction: ${props => props.vertical ? 'column-reverse' : 'row'};
   background-color: rgba(255,255,255, 0.5);
   height: ${props => props.vertical ? '100%' : '56.25vw'}; /* height:width ratio = 9/16 = .5625  */
   max-height: 100vh;
   max-width: 177.78vh; /* 16/9 = 1.778 */
   margin: auto;
+  padding: 10px  0;
   position: absolute;
   top:0; /* vertical center */
   /* bottom:0; */
@@ -25,7 +27,7 @@ export const TextContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 10px;
-  flex: 1;
+  flex-grow: 1;
   button{
     align-self: center;
     border-radius: 30px;
@@ -45,17 +47,17 @@ export const TextContainer = styled.div`
   
 `
 export const QuestionNumber = styled.h1`
-  font-size: 25px;
+  font-size: 20px;
   margin-bottom: 20px;
   text-align: center;
 `
 export const Question = styled.h1`
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 20px;
   text-align: center;
 `
 export const Response = styled.h4`
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 400;
   text-align: center;
 `
@@ -80,10 +82,10 @@ export const FadeIn = styled.div`
 `
 export const DrawContainer = styled.div`
   display: flex;
-  flex: 1;
+  flex-grow: 1;
   img {
-    object-fit: scale-down;
-    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
   }
 `
 export const LeftArrow = styled.div`
