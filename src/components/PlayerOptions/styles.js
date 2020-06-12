@@ -10,6 +10,7 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   border-bottom-right-radius: 10px;
+  z-index: 5;
   background-color: rgb(19, 212, 205);
   padding: 10px;
   align-items: center;
@@ -44,11 +45,12 @@ export const ModalContainer = styled.div`
   top: 0;
   bottom: 0;
   max-height: 400px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
   margin-bottom: auto;
-  width: 50%;
+  width: 90%;
   align-items: center;
   justify-content: center;
 

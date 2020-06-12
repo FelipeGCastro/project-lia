@@ -82,7 +82,8 @@ export const DrawContainer = styled.div`
   display: flex;
   flex: 1;
   img {
-    object-fit: contain;
+    object-fit: scale-down;
+    width: 100%;
   }
 `
 export const LeftArrow = styled.div`
