@@ -1,39 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Home from './pages/Home';
-import About from './pages/About';
+import Home from './pages/Home/'
+import Player from './pages/Player/'
+import GlobalStyle from './styles/global'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-
+    <>
       <Router>
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route path='/' exact component={Home} />
+          <Route path='/player' component={Player} />
         </Switch>
       </Router>
-    </div>
-  );
+      <GlobalStyle />
+    </>
+  )
 }
 
-export default App;
+export default App
