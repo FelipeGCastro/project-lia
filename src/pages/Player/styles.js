@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { TiArrowSortedDown } from 'react-icons/ti'
 
 export const Container = styled.div`
   display: flex;
@@ -27,7 +28,7 @@ export const TextContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 10px;
-  flex-grow: 1;
+  flex: 1;
   button{
     align-self: center;
     border-radius: 30px;
@@ -47,9 +48,17 @@ export const TextContainer = styled.div`
   
 `
 export const QuestionNumber = styled.h1`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 20px;
   margin-bottom: 20px;
   text-align: center;
+  transition-duration: 200ms;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.1)
+  }
 `
 export const Question = styled.h1`
   font-size: 25px;
@@ -82,7 +91,7 @@ export const FadeIn = styled.div`
 `
 export const DrawContainer = styled.div`
   display: flex;
-  flex-grow: 1;
+  flex: 1;
   img {
     max-width: 100%;
     object-fit: contain;
@@ -107,4 +116,7 @@ export const RightArrow = styled.div`
   right: 0;
   align-items: center;
   justify-content: center;
+`
+
+export const IconArrowDown = styled(TiArrowSortedDown)`
 `

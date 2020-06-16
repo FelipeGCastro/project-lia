@@ -10,12 +10,13 @@ import {
   DrawContainer,
   FadeIn,
   LeftArrow,
-  RightArrow
+  RightArrow,
+  IconArrowDown
 } from './styles'
 // import { Link } from 'react-router-dom'
 import shortCatechism from 'src/constants/shortCatechism'
 import { isMobile } from 'react-device-detect'
-import { PlayerOptions } from 'src/components/'
+import { PlayerOptions, QuestionsList } from 'src/components'
 
 const ESPACE_KEY = 32
 const RIGHT_ARROW_KEY = 39
@@ -28,6 +29,7 @@ function Player () {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
   const [screenHeight, setScreenHeight] = useState(window.innerHeight)
   const [isVertical, setIsVertical] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
   useEffect(() => {
     document.addEventListener('keydown', handleNextQuestion, false)
     setIsVertical(screenHeight > screenWidth)
@@ -86,6 +88,7 @@ function Player () {
     <Container>
       <PlayerScreen vertical={isVertical}>
         <PlayerOptions />
+        <QuestionsList setIndex={setIndex} index={index} questionsAmount={shortCatechism.length} isVisible={isVisible} setIsVisible={setIsVisible} />
         {isMobile && (
           <>
             <LeftArrow onClick={lastQuestion} />
@@ -95,7 +98,7 @@ function Player () {
         <TextContainer>
           {question && (
             <FadeIn>
-              <QuestionNumber>Pergunta {shortCatechism[index].questionNumber}</QuestionNumber>
+              <QuestionNumber onClick={() => setIsVisible(true)}>Pergunta {shortCatechism[index].questionNumber}<IconArrowDown color='#606060' /></QuestionNumber>
               <Question>{shortCatechism[index].question}</Question>
             </FadeIn>
           )}
