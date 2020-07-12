@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import { BsInfoSquare, BsArrowRight, BsArrowLeft } from 'react-icons/bs'
 import { GoHome } from 'react-icons/go'
-import { AiOutlineCloseSquare } from 'react-icons/ai'
-import { MdSpaceBar } from 'react-icons/md'
+import { AiOutlineCloseSquare, AiOutlineClose, AiOutlineUnorderedList } from 'react-icons/ai'
+import { MdSpaceBar, MdMenu } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 export const Container = styled.div`
   flex: 1;
   display: flex;
@@ -14,11 +15,57 @@ export const Container = styled.div`
   background-color: rgb(19, 212, 205);
   padding: 10px;
   align-items: center;
+  justify-content: ${props => props.expanded ? 'space-between' : 'center'} ;
+  transition-duration: 400ms;
+  width: ${props => props.expanded ? '320px' : '70px'} ;
+  a {
+    text-decoration: none;
+  }
+`
+export const IconContainer = styled.div`
+  display: flex;
+  margin: 0 15px;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  span {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600
+  }
+`
+export const LinkContainer = styled(Link)`
+  display: flex;
+  margin: 0 15px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  span {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600
+  }
+`
+export const IconMenu = styled(MdMenu)`
+  transition-duration: 200ms;
+  &:hover{
+    transform: scale(1.1)
+  }
+`
+export const IconMenuClose = styled(AiOutlineClose)`
+  transition-duration: 200ms;
+  &:hover{
+    transform: scale(1.2)
+  }
 `
 export const IconHome = styled(GoHome)`
   transition-duration: 200ms;
-  margin-right: 30px;
+  &:hover{
+    transform: scale(1.1)
+  }
+`
+export const IconList = styled(AiOutlineUnorderedList)`
+  transition-duration: 200ms;
   &:hover{
     transform: scale(1.1)
   }

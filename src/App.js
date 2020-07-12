@@ -11,7 +11,7 @@ function App () {
       <Router>
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/player' component={Player} />
+          <Route path='/player/:id' component={Player} />
         </Switch>
       </Router>
       <GlobalStyle />

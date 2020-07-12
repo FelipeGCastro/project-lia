@@ -13,8 +13,8 @@ import {
   RightArrow,
   IconArrowDown
 } from './styles'
-// import { Link } from 'react-router-dom'
-import shortCatechism from 'src/constants/shortCatechism'
+import { useParams } from 'react-router-dom'
+import { CATECHISMS } from 'src/constants'
 import { isMobile } from 'react-device-detect'
 import { PlayerOptions, QuestionsList } from 'src/components'
 
@@ -29,22 +29,10 @@ function Player () {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
   const [screenHeight, setScreenHeight] = useState(window.innerHeight)
   const [isVertical, setIsVertical] = useState(false)
-  const [isVisible, setIsVisible] = useState(true)
-  useEffect(() => {
-    document.addEventListener('keydown', handleNextQuestion, false)
-    setIsVertical(screenHeight > screenWidth)
+  const [isVisible, setIsVisible] = useState(false)
+  const [catechism, setCatechism] = useState([])
+  const { id } = useParams()
 
-    const resizeListener = () => {
-      // change width from the state object
-      setScreenWidth(getWidth())
-      setScreenHeight(getHeight())
-    }
-    window.addEventListener('resize', resizeListener)
-    return () => {
-      document.removeEventListener('keydown', handleNextQuestion, false)
-      window.removeEventListener('resize', resizeListener)
-    }
-  }, [])
   useEffect(() => {
     setIsVertical(screenHeight > screenWidth)
   }, [screenHeight, screenWidth])
@@ -57,23 +45,40 @@ function Player () {
   document.documentElement.clientHeight ||
   document.body.clientHeight
 
-  const handleNextQuestion = (event) => {
-    if (event.keyCode === RIGHT_ARROW_KEY) {
-      nextQuestion()
-      setQuestion(false)
-    }
-    if (event.keyCode === ESPACE_KEY) {
-      setResponseVisible(true)
-    }
-    if (event.keyCode === LEFT_ARROW_KEY) {
-      lastQuestion()
-      setQuestion(false)
-    }
-  }
-
   const nextQuestion = useCallback(() => {
-    setIndex(prev => prev === (shortCatechism.length - 1) ? shortCatechism.length - 1 : prev + 1)
-  }, [shortCatechism])
+    console.log(catechism.length)
+    setIndex(prev => prev === (catechism.length - 1) ? prev : prev + 1)
+  }, [catechism])
+
+  useEffect(() => {
+    setCatechism(CATECHISMS[id])
+    setIsVertical(screenHeight > screenWidth)
+    const resizeListener = () => {
+      // change width from the state object
+      setScreenWidth(getWidth())
+      setScreenHeight(getHeight())
+    }
+    const handleNextQuestion = (event) => {
+      if (event.keyCode === RIGHT_ARROW_KEY) {
+        nextQuestion()
+        setQuestion(false)
+      }
+      if (event.keyCode === ESPACE_KEY) {
+        setResponseVisible(true)
+      }
+      if (event.keyCode === LEFT_ARROW_KEY) {
+        lastQuestion()
+        setQuestion(false)
+      }
+    }
+    document.addEventListener('keydown', handleNextQuestion, false)
+    window.addEventListener('resize', resizeListener)
+    return () => {
+      document.removeEventListener('keydown', handleNextQuestion, false)
+      window.removeEventListener('resize', resizeListener)
+    }
+  }, [nextQuestion])
+
   const lastQuestion = () => setIndex(prev => prev === 0 ? 0 : prev - 1)
 
   useEffect(() => {
@@ -83,12 +88,11 @@ function Player () {
   useEffect(() => {
     setQuestion(true)
   }, [question])
-
-  return (
+  return !!catechism[0] && (
     <Container>
       <PlayerScreen vertical={isVertical}>
-        <PlayerOptions />
-        <QuestionsList setIndex={setIndex} index={index} questionsAmount={shortCatechism.length} isVisible={isVisible} setIsVisible={setIsVisible} />
+        <PlayerOptions showAnswers={setIsVisible} />
+        <QuestionsList setIndex={setIndex} index={index} questionsAmount={catechism.length} isVisible={isVisible} setIsVisible={setIsVisible} />
         {isMobile && (
           <>
             <LeftArrow onClick={lastQuestion} />
@@ -96,15 +100,15 @@ function Player () {
           </>
         )}
         <TextContainer>
-          {question && (
+          {catechism && (
             <FadeIn>
-              <QuestionNumber onClick={() => setIsVisible(true)}>Pergunta {shortCatechism[index].questionNumber}<IconArrowDown color='#606060' /></QuestionNumber>
-              <Question>{shortCatechism[index].question}</Question>
+              <QuestionNumber onClick={() => setIsVisible(true)}>Pergunta {catechism[index].questionNumber}<IconArrowDown color='#606060' /></QuestionNumber>
+              <Question>{catechism[index].question}</Question>
             </FadeIn>
           )}
           {responseVisible ? (
             <FadeIn>
-              <Response>{shortCatechism[index].answer}</Response>
+              <Response>{catechism[index].answer}</Response>
             </FadeIn>)
             : <button onClick={() => setResponseVisible(true)}>Ver Resposta</button>}
         </TextContainer>

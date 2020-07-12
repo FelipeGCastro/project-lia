@@ -4,27 +4,51 @@ import {
   Container,
   IconInfo,
   IconHome,
+  IconMenu,
   ModalContainer,
+  IconMenuClose,
+  IconList,
   IconClose,
   IconLeft,
   IconRight,
-  IconSpace
+  IconSpace,
+  IconContainer,
+  LinkContainer
 } from './styles'
-import { Link } from 'react-router-dom'
 import { isMobile } from 'react-device-detect'
 import { Mobile } from 'src/components/'
 
-function PlayerOptions () {
+function PlayerOptions ({ showAnswers }) {
   const [isVisible, setIsVisible] = useState(true)
+  const [expanded, setExpaded] = useState(false)
+  function handleExpandButton () {
+    setExpaded(!expanded)
+    setTimeout(() => {
+      setExpaded(prev => !prev)
+    }, 3000)
+  }
   return (
     <>
-      <Container>
-        <Link to='/'>
-          <IconHome size='44' color='#fff' />
-        </Link>
-        <div onClick={() => setIsVisible(true)}>
-          <IconInfo size='40' color='#fff' />
-        </div>
+      <Container expanded={expanded}>
+        <IconContainer onClick={handleExpandButton}>
+          {expanded ? <IconMenuClose size='40' color='#fff' /> : <IconMenu size='44' color='#fff' />}
+        </IconContainer>
+        {!!expanded && (
+          <>
+            <LinkContainer to='/'>
+              <IconHome size='30' color='#fff' />
+              <span>Home</span>
+            </LinkContainer>
+            <IconContainer onClick={() => setIsVisible(true)}>
+              <IconInfo size='30' color='#fff' />
+              <span>Info</span>
+            </IconContainer>
+            <IconContainer onClick={() => showAnswers(true)}>
+              <IconList size='30' color='#fff' />
+              <span>Respostas</span>
+            </IconContainer>
+          </>
+        )}
       </Container>
       {isVisible && (
         <ModalContainer>
