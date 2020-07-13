@@ -24,7 +24,7 @@ function PlayerOptions ({ showAnswers }) {
   function handleExpandButton () {
     setExpaded(!expanded)
     setTimeout(() => {
-      setExpaded(prev => !prev)
+      setExpaded(prev => false)
     }, 3000)
   }
   return (
