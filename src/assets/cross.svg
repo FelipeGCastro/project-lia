@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="219.986" height="149.806" viewBox="0 0 219.986 149.806">
+  <g id="cross" transform="translate(0.39 -0.476)">
+    <path id="light" d="M132.437-.665H198.85L352.423,132.348v16.793H231.7Z" transform="translate(-132.827 1.141)" fill="#ffd900" opacity="0.158"/>
+    <g id="Cross-2" data-name="Cross" transform="translate(60.787 37.354)">
+      <g id="Retângulo_4" data-name="Retângulo 4" transform="translate(31.145 0.122)" fill="#968787" stroke="#707070" stroke-width="1">
+        <rect width="9" height="95" stroke="none"/>
+        <rect x="0.5" y="0.5" width="8" height="94" fill="none"/>
+      </g>
+      <g id="Retângulo_5" data-name="Retângulo 5" transform="translate(0.145 18.122)" fill="#968787" stroke="#707070" stroke-width="1">
+        <rect width="71" height="8" rx="2" stroke="none"/>
+        <rect x="0.5" y="0.5" width="70" height="7" rx="1.5" fill="none"/>
+      </g>
+      <line id="Linha_4" data-name="Linha 4" x2="7.673" transform="translate(63.486 24.511)" fill="none" stroke="#746767" stroke-width="1"/>
+      <line id="Linha_5" data-name="Linha 5" x2="7.673" transform="translate(59.65 19.822)" fill="none" stroke="#746767" stroke-width="1"/>
+      <line id="Linha_19" data-name="Linha 19" x2="7.673" transform="translate(48.353 22.166)" fill="none" stroke="#746767" stroke-width="1"/>
+      <line id="Linha_6" data-name="Linha 6" x2="7.673" transform="translate(0.184 24.511)" fill="none" stroke="#746767" stroke-width="1"/>
+      <line id="Linha_7" data-name="Linha 7" x2="4.263" transform="translate(0.184 19.822)" fill="none" stroke="#746767" stroke-width="1"/>
+      <line id="Linha_8" data-name="Linha 8" x2="4.263" transform="translate(16.596 22.593)" fill="none" stroke="#746767" stroke-width="1"/>
+      <line id="Linha_9" data-name="Linha 9" y1="2.345" transform="translate(33.434 1.279)" fill="none" stroke="#746767" stroke-width="1"/>
+      <line id="Linha_10" data-name="Linha 10" y1="8.526" transform="translate(38.762 0)" fill="none" stroke="#746767" stroke-width="1"/>
+      <line id="Linha_11" data-name="Linha 11" y1="8.526" transform="translate(32.581 6.82)" fill="none" stroke="#746767" stroke-width="1"/>
+      <line id="Linha_12" data-name="Linha 12" y1="8.526" transform="translate(31.942 41.349)" fill="none" stroke="#746767" stroke-width="1"/>
+      <line id="Linha_13" data-name="Linha 13" y1="5.755" transform="translate(35.565 50.94)" fill="none" stroke="#746767" stroke-width="1"/>
+      <line id="Linha_14" data-name="Linha 14" y1="5.755" transform="translate(31.942 87.6)" fill="none" stroke="#746767" stroke-width="1"/>
+      <line id="Linha_15" data-name="Linha 15" y1="5.755" transform="translate(38.549 90.371)" fill="none" stroke="#746767" stroke-width="1"/>
+      <line id="Linha_17" data-name="Linha 17" y1="5.755" transform="translate(35.565 90.371)" fill="none" stroke="#746767" stroke-width="1"/>
+      <line id="Linha_18" data-name="Linha 18" y1="5.755" transform="translate(37.909 41.349)" fill="none" stroke="#746767" stroke-width="1"/>
+      <line id="Linha_16" data-name="Linha 16" y1="14.28" transform="translate(33.647 81.846)" fill="none" stroke="#746767" stroke-width="1"/>
+      <rect id="Retângulo_6" data-name="Retângulo 6" width="31" height="1" transform="translate(0.145 18.122)" fill="#fffad8" opacity="0.318"/>
+      <path id="Caminho_52" data-name="Caminho 52" d="M0,0H31.118V1.279L2.674,1.206,1.927,2Z" transform="translate(39.934 17.584)" fill="#fffad8" opacity="0.318"/>
+      <rect id="Retângulo_7" data-name="Retângulo 7" width="9" height="2" transform="translate(31.145 0.122)" fill="#fffad8" opacity="0.318"/>
+      <path id="Caminho_51" data-name="Caminho 51" d="M0,.4,1.926,0,1.14,1.849H16.4L18.578.883l-.887,2.245H0Z" transform="translate(34.323 1.172) rotate(90)" fill="#fffad8" opacity="0.318"/>
+      <rect id="Retângulo_10" data-name="Retângulo 10" width="7" height="2" transform="translate(2.145 19.122) rotate(90)" fill="#fffad8" opacity="0.318"/>
+      <path id="Caminho_53" data-name="Caminho 53" d="M0,0,1.112,1.173h68.8V2.452H0Z" transform="translate(33.648 26.11) rotate(90)" fill="#fffad8" opacity="0.318"/>
+      <path id="Caminho_54" data-name="Caminho 54" d="M0,0H69.91V1.279H0Z" transform="translate(39.721 26.11) rotate(90)" fill="#554c4c" opacity="0.318"/>
+      <path id="Caminho_56" data-name="Caminho 56" d="M0,0H16.51V1.279H0Z" transform="translate(39.721 1.385) rotate(90)" fill="#554c4c" opacity="0.318"/>
+      <path id="Caminho_55" data-name="Caminho 55" d="M0,0H69.7V1.279H0Z" transform="translate(1.356 24.831)" fill="#554c4c" opacity="0.318"/>
+      <path id="Caminho_57" data-name="Caminho 57" d="M0,0H6.021V1.279H0Z" transform="translate(32.422 16.518)" fill="#554c4c" opacity="0.318"/>
+      <path id="Caminho_58" data-name="Caminho 58" d="M1.4,0H6.161V1.279L.179,1.128Z" transform="translate(32.281 26.11)" fill="#554c4c" opacity="0.318"/>
+    </g>
+    <ellipse id="Elipse_317" data-name="Elipse 317" cx="39.537" cy="2.238" rx="39.537" ry="2.238" transform="matrix(0.998, 0.07, -0.07, 0.998, 92.022, 131.687)" fill="#959191"/>
+    <ellipse id="Elipse_318" data-name="Elipse 318" cx="39.537" cy="1.705" rx="39.537" ry="1.705" transform="matrix(0.978, -0.208, 0.208, 0.978, 103.65, 146.716)" fill="#959191"/>
+  </g>
+</svg>

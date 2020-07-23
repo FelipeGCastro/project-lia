@@ -1,17 +1,27 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Container } from './styles'
+import { Container, CardsContainer, LogoImage, ContentCard } from './styles'
+import Logo from 'src/assets/Logo.svg'
+import Baby from 'src/assets/littleBaby.svg'
+import Cross from 'src/assets/cross.svg'
 function Home () {
   return (
     <Container>
-      <h1>Projeto Lia</h1>
-
-      <Link to='/player/1'>
-        <div className='links'>Breve Catecismo de Westminster</div>
-      </Link>
-      <Link to='/player/2'>
-        <div className='links'>Baby Catecismo</div>
-      </Link>
+      <LogoImage src={Logo} />
+      <CardsContainer>
+        <Link to='/player/2'>
+          <ContentCard className='yellowCard'>
+            <img src={Baby} />
+            <span>Baby Catecismo</span>
+          </ContentCard>
+        </Link>
+        <Link to='/player/1'>
+          <ContentCard className='greenCard'>
+            <img src={Cross} />
+            <span> Breve Catecismo de Westminster</span>
+          </ContentCard>
+        </Link>
+      </CardsContainer>
     </Container>
   )
 }
