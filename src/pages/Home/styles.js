@@ -26,14 +26,19 @@ export const Container = styled.div`
     background-color: #D8F8FF;
   }
 `
+export const LogoImage = styled.img`
+min-width: 300px;
+width: 100%;
+max-width: 500px;
+margin: 20px 0;
+`
 export const CardsContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 `
-export const LogoImage = styled.img`
-  width: 500px;
-  height: 500px;
-  margin-bottom: 20px;
-`
+
 export const ContentCard = styled.div`
   width: 250px;
   height: 250px;
@@ -43,7 +48,7 @@ export const ContentCard = styled.div`
   flex-direction: column;
   justify-content: space-between;
   border-radius: 10px;
-  margin: 10px 10px;
+  margin: 10px;
   transition-duration: 400ms;
 
   &:hover {
