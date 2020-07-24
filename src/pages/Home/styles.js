@@ -26,11 +26,81 @@ export const Container = styled.div`
     background-color: #D8F8FF;
   }
 `
-export const LogoImage = styled.img`
+export const LogoImage = styled.div`
 min-width: 300px;
 width: 100%;
 max-width: 500px;
 margin: 20px 0;
+  @-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  /* ANIMAÇÃO PARA FICAR PARANDO UM POUCO EM 360 */
+  /* 100% {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  0% {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  } */
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  /* ANIMAÇÃO PARA FICAR PARANDO UM POUCO EM 360 */
+  /* 100% {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  0% {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  } */
+}
+#thingsAround {
+  transform-origin: center;
+  -webkit-animation: rotating 180s linear infinite;
+  -moz-animation: rotating 180s linear infinite;
+  -ms-animation: rotating 180s linear infinite;
+  -o-animation: rotating 180s linear infinite;
+  animation: rotating 180s linear infinite;
+  /* ANIMAÇÃO PARA FICAR PARANDO UM POUCO EM 360 */
+  /* animation: rotating 10s infinite ease-in-out; */
+}
 `
 export const CardsContainer = styled.div`
   display: flex;

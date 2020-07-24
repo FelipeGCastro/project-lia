@@ -1,13 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Container, CardsContainer, LogoImage, ContentCard } from './styles'
-import Logo from 'src/assets/Logo.svg'
+import { ReactComponent as Logo } from 'src/assets/Logo.svg'
 import Baby from 'src/assets/littleBaby.svg'
 import Cross from 'src/assets/cross.svg'
 function Home () {
   return (
     <Container>
-      <LogoImage src={Logo} />
+      <LogoImage>
+        <Logo />
+      </LogoImage>
       <CardsContainer>
         <Link to='/player/2'>
           <ContentCard className='yellowCard'>
