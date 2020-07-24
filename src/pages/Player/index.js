@@ -77,7 +77,7 @@ function Player () {
       document.removeEventListener('keydown', handleNextQuestion, false)
       window.removeEventListener('resize', resizeListener)
     }
-  }, [nextQuestion])
+  }, [id, nextQuestion, screenHeight, screenWidth])
 
   const lastQuestion = () => setIndex(prev => prev === 0 ? 0 : prev - 1)
 
