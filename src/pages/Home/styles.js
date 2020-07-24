@@ -27,6 +27,7 @@ export const Container = styled.div`
   }
 `
 export const LogoImage = styled.div`
+display: flex;
 min-width: 300px;
 width: 100%;
 max-width: 500px;
