@@ -46,6 +46,11 @@ export const QuestionNumber = styled.button`
   width: 44px;
   height: 44px;
   cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgba(19, 212, 205,0.8);
+  }
 `
 export const IconClose = styled(AiOutlineCloseSquare)`
   transition-duration: 200ms;
