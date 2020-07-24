@@ -27,82 +27,58 @@ export const Container = styled.div`
   }
 `
 export const LogoImage = styled.div`
-display: flex;
-min-width: 300px;
-width: 100%;
-max-width: 500px;
-margin: 20px 0;
-  @-webkit-keyframes rotating /* Safari and Chrome */ {
-  from {
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+  display: flex;
+  min-width: 300px;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px 0;
+
+  transition: 0.3s transform;
+
+  &:hover {
+    transform: scale(1.1);
   }
-  to {
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
+
+  @-webkit-keyframes rotating {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
   }
-  /* ANIMAÇÃO PARA FICAR PARANDO UM POUCO EM 360 */
-  /* 100% {
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
   }
-  20% {
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+
+  #thingsAround {
+    transform-origin: center;
+    -webkit-animation: rotating 180s linear infinite;
+    -moz-animation: rotating 180s linear infinite;
+    -ms-animation: rotating 180s linear infinite;
+    -o-animation: rotating 180s linear infinite;
+    animation: rotating 180s linear infinite;
   }
-  0% {
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  } */
-}
-@keyframes rotating {
-  from {
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-  /* ANIMAÇÃO PARA FICAR PARANDO UM POUCO EM 360 */
-  /* 100% {
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  20% {
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  0% {
-    -webkit-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  } */
-}
-#thingsAround {
-  transform-origin: center;
-  -webkit-animation: rotating 180s linear infinite;
-  -moz-animation: rotating 180s linear infinite;
-  -ms-animation: rotating 180s linear infinite;
-  -o-animation: rotating 180s linear infinite;
-  animation: rotating 180s linear infinite;
-  /* ANIMAÇÃO PARA FICAR PARANDO UM POUCO EM 360 */
-  /* animation: rotating 10s infinite ease-in-out; */
-}
 `
+
 export const CardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -129,11 +105,11 @@ export const ContentCard = styled.div`
 
   span {
     font-family: 'Comic Neue', cursive;
-  text-decoration: none;
-  text-align: center;
-  font-size: 29px;
-  color: #484040;
-  font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    font-size: 29px;
+    color: #484040;
+    font-weight: 600;
   }
- 
+
 `
