@@ -8,20 +8,21 @@ import {
   QuestionNumber,
   TextContainer,
   DrawContainer,
-  FadeIn,
   LeftArrow,
   RightArrow,
   IconArrowDown
 } from './styles'
 import { useParams } from 'react-router-dom'
-import { CATECHISMS } from 'src/constants'
+import {
+  CATECHISMS,
+  ESPACE_KEY,
+  RIGHT_ARROW_KEY,
+  LEFT_ARROW_KEY,
+  DEFAULT_IMAGE
+} from 'src/constants'
 import { isMobile } from 'react-device-detect'
 import { PlayerOptions, QuestionsList } from 'src/components'
-
-const ESPACE_KEY = 32
-const RIGHT_ARROW_KEY = 39
-const LEFT_ARROW_KEY = 37
-const DEFAULT_IMAGE = 'https://storage.cloud.google.com/projetolia/babyCatechism/40.svg'
+import { FadeIn } from 'src/styles'
 
 function Player () {
   const [responseVisible, setResponseVisible] = useState(false)
