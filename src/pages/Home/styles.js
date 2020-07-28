@@ -34,9 +34,9 @@ export const LogoImage = styled.div`
   margin: 20px 0;
 
   transition: 0.3s transform;
-
+  
   &:hover {
-    transform: scale(1.1);
+    transform: ${props => !props.isMobile && 'scale(1.1)'};
   }
 
   @-webkit-keyframes rotating {
@@ -99,8 +99,8 @@ export const ContentCard = styled.div`
   transition-duration: 400ms;
 
   &:hover {
-    transform: translateY(-10px);
-    transform: scale(1.1)
+    transform: ${props => !props.isMobile && 'translateY(-10px)'};
+    transform: ${props => !props.isMobile && 'scale(1.1)'};
   }
 
   span {
