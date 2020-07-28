@@ -21,6 +21,7 @@ import { PlayerOptions, QuestionsList } from 'src/components'
 const ESPACE_KEY = 32
 const RIGHT_ARROW_KEY = 39
 const LEFT_ARROW_KEY = 37
+const DEFAULT_IMAGE = 'https://storage.cloud.google.com/projetolia/babyCatechism/40.svg'
 
 function Player () {
   const [responseVisible, setResponseVisible] = useState(false)
@@ -114,7 +115,7 @@ function Player () {
         </TextContainer>
         <DrawContainer>
           <img
-            src='https://instagram.flis5-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/74898962_450912375808678_2198509075038108810_n.jpg?_nc_ht=instagram.flis5-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=lJ192AztI4sAX-eagak&oh=07c953d349532c7670fb4640c66349a9&oe=5F0C5DEE'
+            src={catechism[index].image || DEFAULT_IMAGE}
             alt='draw'
           />
         </DrawContainer>
