@@ -44,7 +44,7 @@ function PlayerStories () {
   return !!story[0] && (
     <Container>
       <PlayerScreen>
-        <PlayerOptions />
+        <PlayerOptions isStory />
         {isMobile && (
           <>
             <LeftArrow onClick={lastItem} />

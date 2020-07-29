@@ -18,7 +18,7 @@ import {
 import { isMobile } from 'react-device-detect'
 import { Mobile } from 'src/components/'
 
-function PlayerOptions ({ showAnswers }) {
+function PlayerOptions ({ showAnswers, isStory }) {
   const [isVisible, setIsVisible] = useState(true)
   const [expanded, setExpaded] = useState(false)
   function handleExpandButton () {
@@ -62,7 +62,7 @@ function PlayerOptions ({ showAnswers }) {
                   LeftComponent={IconLeft}
                   RightComponent={IconRight}
                 />
-                <h3>Pressione as laterais para poder ir e voltar nas perguntas</h3>
+                <h3>Pressione as laterais para poder ir e voltar</h3>
               </>
             )
             : (
@@ -71,9 +71,12 @@ function PlayerOptions ({ showAnswers }) {
                   <IconLeft size='55' color='#666' />
                   <IconRight size='55' color='#666' />
                 </div>
-                <h3>Setas para passar ou voltar nas Perguntas</h3>
-                <IconSpace size='55' color='#666' />
-                <h3>Espaço para mostrar Resposta</h3>
+                <h3>Setas do teclado para passar ou voltar</h3>
+                {!isStory &&
+                  <>
+                    <IconSpace size='55' color='#666' />
+                    <h3>Espaço para mostrar Resposta</h3>
+                  </>}
               </>
             )}
 

@@ -8,7 +8,7 @@ export const Container = styled.div`
 `
 export const PlayerScreen = styled.div`
   display: flex;
-  width: 100vw; 
+  width: 100%; 
   overflow: scroll;
   flex-direction: row;
   background-color: rgba(255,255,255, 0.5);
@@ -16,10 +16,6 @@ export const PlayerScreen = styled.div`
   height: 100%;
   margin: auto;
   padding: 10px  0;
-  position: absolute;
-  top:0; 
-  left:0;
-  right:0;
 `
 export const TextContainer = styled.div`
   display: flex;

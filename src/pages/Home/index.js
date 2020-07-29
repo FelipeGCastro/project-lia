@@ -20,13 +20,13 @@ function Home () {
           </ContentCard>
         </Link>
         <Link to='/player/1'>
-          <ContentCard className='greenCard'>
+          <ContentCard isMobile={isMobile} className='greenCard'>
             <img src={Cross} alt='Cruz' />
             <span> Breve Catecismo de Westminster</span>
           </ContentCard>
         </Link>
         <Link to='/stories/1'>
-          <ContentCard className='blueCard'>
+          <ContentCard isMobile={isMobile} className='blueCard'>
             <img src={HandsPraying} alt='Oração' />
             <span>Oração do Pai Nosso</span>
           </ContentCard>

@@ -11,18 +11,23 @@ export default createGlobalStyle`
     height: 100%;
   }
   body {
-    color: #333;
     -webkit-font-smoothing: antialiased;
     background: rgb(19, 212, 205);
-  background: linear-gradient(
+    background: linear-gradient(
     180deg,
     rgba(19, 212, 205, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
+    background-attachment: fixed;
   }
   body, input, button {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 16px;
+  }
+
+  #root {
+    display: flex;
+    height: 100%;
   }
 
   h1, h2, h3, h4, h5, h6, strong {

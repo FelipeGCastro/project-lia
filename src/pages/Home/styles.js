@@ -33,7 +33,7 @@ export const LogoImage = styled.div`
   max-width: 500px;
   margin: 20px 0;
 
-  transition: 0.3s transform;
+  transition: 0.8s transform;
   
   &:hover {
     transform: ${props => !props.isMobile && 'scale(1.1)'};
