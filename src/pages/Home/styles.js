@@ -25,6 +25,9 @@ export const Container = styled.div`
   .blueCard {
     background-color: #D8F8FF;
   }
+  .browCard {
+    background-color: #FFF5D8;
+  }
 `
 export const LogoImage = styled.div`
   display: flex;

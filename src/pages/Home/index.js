@@ -6,6 +6,8 @@ import Baby from 'src/assets/littleBaby.svg'
 import { isMobile } from 'react-device-detect'
 import Cross from 'src/assets/cross.svg'
 import HandsPraying from 'src/assets/handsPraying.svg'
+import feather from 'src/assets/feather.svg'
+
 function Home () {
   return (
     <Container>
@@ -29,6 +31,12 @@ function Home () {
           <ContentCard isMobile={isMobile} className='blueCard'>
             <img src={HandsPraying} alt='Oração' />
             <span>Oração do Pai Nosso</span>
+          </ContentCard>
+        </Link>
+        <Link to='/stories/2'>
+          <ContentCard isMobile={isMobile} className='browCard'>
+            <img src={feather} alt='Credo' />
+            <span>Credo Apostólico</span>
           </ContentCard>
         </Link>
       </CardsContainer>

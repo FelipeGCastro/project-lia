@@ -1,13 +1,15 @@
 import babyCatechism from './babyCatechism'
 import shortCatechism from './shortCatechism'
 import lordsPray from './lordsPray'
+import apostlesCreed from './apostlesCreed'
 
 const CATECHISMS = {
   1: shortCatechism,
   2: babyCatechism
 }
 const STORIES = {
-  1: lordsPray
+  1: lordsPray,
+  2: apostlesCreed
 }
 
 const ESPACE_KEY = 32
