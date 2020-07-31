@@ -34,6 +34,9 @@ export const Container = styled.div`
   .purpleCard {
     background-color: #E6D8FF;
   }
+  .lightBlueCard {
+    background-color: #D8FEFF;
+  }
 `
 export const LogoImage = styled.div`
   display: flex;
