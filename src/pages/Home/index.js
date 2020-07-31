@@ -7,38 +7,36 @@ import { isMobile } from 'react-device-detect'
 import Cross from 'src/assets/cross.svg'
 import HandsPraying from 'src/assets/handsPraying.svg'
 import feather from 'src/assets/feather.svg'
+import babyKing from 'src/assets/babyKing.svg'
+import bible from 'src/assets/bible.svg'
+
+const menuList = [
+  { link: '/player/2', colorCard: 'yellowCard', img: Baby, alt: 'Baby', title: 'Baby Catecismo' },
+  { link: '/player/1', colorCard: 'greenCard', img: Cross, alt: 'Cruz', title: 'Breve Catecismo de Westminster' },
+  { link: '/stories/1', colorCard: 'blueCard', img: HandsPraying, alt: 'Oração', title: 'Oração do Pai Nosso' },
+  { link: '/stories/2', colorCard: 'browCard', img: feather, alt: 'Credo', title: 'Credo Apostólico' },
+  { link: '/stories/3', colorCard: 'redCard', img: babyKing, alt: 'Bebê Rei', title: 'Jesus Homem e Deus' },
+  { link: '/stories/4', colorCard: 'purpleCard', img: bible, alt: 'Bíblia', title: 'A Bíblia não erra' }
+]
 
 function Home () {
+  function renderItem (item) {
+    return (
+      <Link to={item.link}>
+        <ContentCard isMobile={isMobile} className={item.colorCard}>
+          <img src={item.img} alt={item.alt} />
+          <span>{item.title}</span>
+        </ContentCard>
+      </Link>
+    )
+  }
   return (
     <Container>
       <LogoImage isMobile={isMobile}>
         <Logo />
       </LogoImage>
       <CardsContainer>
-        <Link to='/player/2'>
-          <ContentCard isMobile={isMobile} className='yellowCard'>
-            <img src={Baby} alt='Baby' />
-            <span>Baby Catecismo</span>
-          </ContentCard>
-        </Link>
-        <Link to='/player/1'>
-          <ContentCard isMobile={isMobile} className='greenCard'>
-            <img src={Cross} alt='Cruz' />
-            <span> Breve Catecismo de Westminster</span>
-          </ContentCard>
-        </Link>
-        <Link to='/stories/1'>
-          <ContentCard isMobile={isMobile} className='blueCard'>
-            <img src={HandsPraying} alt='Oração' />
-            <span>Oração do Pai Nosso</span>
-          </ContentCard>
-        </Link>
-        <Link to='/stories/2'>
-          <ContentCard isMobile={isMobile} className='browCard'>
-            <img src={feather} alt='Credo' />
-            <span>Credo Apostólico</span>
-          </ContentCard>
-        </Link>
+        {menuList.map(renderItem)}
       </CardsContainer>
     </Container>
   )

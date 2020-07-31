@@ -28,6 +28,12 @@ export const Container = styled.div`
   .browCard {
     background-color: #FFF5D8;
   }
+  .redCard {
+    background-color: #FFD8D8;
+  }
+  .purpleCard {
+    background-color: #E6D8FF;
+  }
 `
 export const LogoImage = styled.div`
   display: flex;
@@ -35,7 +41,6 @@ export const LogoImage = styled.div`
   width: 100%;
   max-width: 500px;
   margin: 20px 0;
-
   transition: 0.8s transform;
   
   &:hover {

@@ -2,6 +2,8 @@ import babyCatechism from './babyCatechism'
 import shortCatechism from './shortCatechism'
 import lordsPray from './lordsPray'
 import apostlesCreed from './apostlesCreed'
+import jesusManAndGod from './jesusManAndGod'
+import bibleNoError from './bibleNoError'
 
 const CATECHISMS = {
   1: shortCatechism,
@@ -9,7 +11,9 @@ const CATECHISMS = {
 }
 const STORIES = {
   1: lordsPray,
-  2: apostlesCreed
+  2: apostlesCreed,
+  3: jesusManAndGod,
+  4: bibleNoError
 }
 
 const ESPACE_KEY = 32
