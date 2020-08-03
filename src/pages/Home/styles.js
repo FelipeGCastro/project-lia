@@ -40,11 +40,16 @@ export const Container = styled.div`
 `
 export const LogoImage = styled.div`
   display: flex;
-  min-width: 300px;
+  min-width: 250px;
   width: 100%;
   max-width: 500px;
   margin: 20px 0;
   transition: 0.8s transform;
+  position: relative;
+
+  svg {
+    width: 100%;
+  }
   
   &:hover {
     transform: ${props => !props.isMobile && 'scale(1.1)'};
@@ -98,7 +103,7 @@ export const CardsContainer = styled.div`
 `
 
 export const ContentCard = styled.div`
-  width: 250px;
+  width: 230px;
   height: 250px;
   padding: 10px;
   display: flex;
@@ -106,7 +111,7 @@ export const ContentCard = styled.div`
   flex-direction: column;
   justify-content: space-between;
   border-radius: 10px;
-  margin: 10px;
+  margin: 7px;
   transition-duration: 400ms;
 
   &:hover {
@@ -118,7 +123,7 @@ export const ContentCard = styled.div`
     font-family: 'Comic Neue', cursive;
     text-decoration: none;
     text-align: center;
-    font-size: 29px;
+    font-size: 27px;
     color: #484040;
     font-weight: 600;
   }
