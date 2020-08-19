@@ -8,7 +8,7 @@ export const Container = styled.div`
 `
 export const PlayerScreen = styled.div`
   display: flex;
-  width: 100vw; 
+  width: 100vw;
   overflow: scroll;
   flex-direction: ${props => props.vertical ? 'column-reverse' : 'row'};
   background-color: rgba(255,255,255, 0.5);
@@ -45,7 +45,7 @@ export const TextContainer = styled.div`
       opacity: 0.8;
       font-size: 24px;
     }
-  
+
 `
 export const QuestionNumber = styled.h1`
   display: flex;
@@ -71,11 +71,13 @@ export const Response = styled.h4`
   text-align: center;
 `
 export const DrawContainer = styled.div`
-  display: flex;
+  display: flow-root;
   flex: 1;
   img {
     max-width: 100%;
     object-fit: contain;
+    margin: auto;
+    display: flex;
   }
 `
 export const LeftArrow = styled.div`
