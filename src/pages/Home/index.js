@@ -6,9 +6,9 @@ import { isMobile } from 'react-device-detect'
 import { MENU_LIST } from 'src/constants'
 
 function Home () {
-  function renderItem (item) {
+  function renderItem (item, index) {
     return (
-      <Link to={item.link}>
+      <Link to={item.link} key={index}>
         <ContentCard isMobile={isMobile} className={item.colorCard}>
           <img src={item.img} alt={item.alt} />
           <span>{item.title}</span>

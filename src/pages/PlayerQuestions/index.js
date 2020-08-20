@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react'
-
 import {
   Container,
   PlayerScreen,
@@ -17,11 +16,10 @@ import {
   CATECHISMS,
   ESPACE_KEY,
   RIGHT_ARROW_KEY,
-  LEFT_ARROW_KEY,
-  DEFAULT_IMAGE
+  LEFT_ARROW_KEY
 } from 'src/constants'
 import { isMobile } from 'react-device-detect'
-import { PlayerOptions, QuestionsList } from 'src/components'
+import { PlayerOptions, QuestionsList, Image} from 'src/components'
 import { FadeIn } from 'src/styles'
 
 function Player () {
@@ -48,7 +46,7 @@ function Player () {
   document.body.clientHeight
 
   const nextQuestion = useCallback(() => {
-    console.log(catechism.length)
+    console.log(catechism)
     setIndex(prev => prev === (catechism.length - 1) ? prev : prev + 1)
   }, [catechism])
 
@@ -90,6 +88,7 @@ function Player () {
   useEffect(() => {
     setQuestion(true)
   }, [question])
+
   return !!catechism[0] && (
     <Container>
       <PlayerScreen vertical={isVertical}>
@@ -115,10 +114,7 @@ function Player () {
             : <button onClick={() => setResponseVisible(true)}>Ver Resposta</button>}
         </TextContainer>
         <DrawContainer>
-          <img
-            src={catechism[index].image || DEFAULT_IMAGE}
-            alt='draw'
-          />
+          <Image src={catechism[index].image} />
         </DrawContainer>
       </PlayerScreen>
       {/* <Link to='/'>Home</Link> */}

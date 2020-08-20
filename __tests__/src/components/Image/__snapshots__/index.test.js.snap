@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link changes the class when hovered Snapshot 1`] = `
+Array [
+  <span>
+    <span
+      className="react-loading-skeleton sc-AxjAm kDlNXv css-1vmnjpn-skeletonStyles-Skeleton"
+      style={Object {}}
+    >
+      ‌
+    </span>
+  </span>,
+  <img
+    alt="alt"
+    onLoad={[Function]}
+    src="src"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />,
+]
+`;
