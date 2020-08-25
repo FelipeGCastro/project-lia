@@ -25,6 +25,7 @@ import gift from 'src/assets/gift.svg'
 import goldCrowd from 'src/assets/goldCrowd.svg'
 import hands from 'src/assets/hands.svg'
 import westminster from 'src/assets/westminster.svg'
+export { default as colors } from './colors'
 
 const MENU_LIST = [
   { link: '/player/2', colorCard: 'yellowCard', img: Baby, alt: 'Baby', title: 'Baby Catecismo' },

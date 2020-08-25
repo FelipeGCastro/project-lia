@@ -43,7 +43,7 @@ export const LogoImage = styled.div`
   min-width: 250px;
   width: 100%;
   max-width: 500px;
-  margin: 20px 0;
+  margin: 15px 0;
   transition: 0.8s transform;
   position: relative;
 

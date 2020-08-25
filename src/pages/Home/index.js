@@ -4,6 +4,7 @@ import { Container, CardsContainer, LogoImage, ContentCard } from './styles'
 import { ReactComponent as Logo } from 'src/assets/Logo.svg'
 import { isMobile } from 'react-device-detect'
 import { MENU_LIST } from 'src/constants'
+import { TopBar } from 'src/components'
 
 function Home () {
   function renderItem (item, index) {
@@ -18,6 +19,7 @@ function Home () {
   }
   return (
     <Container>
+      <TopBar />
       <LogoImage isMobile={isMobile}>
         <Logo />
       </LogoImage>
